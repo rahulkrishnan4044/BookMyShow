@@ -1,0 +1,1146 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+
+#root {
+    min-height: 100vh;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 30px 50px;
+}
+
+
+.navbar {
+    background-color: #e50914;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* Sticky navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-radius: 0 0 15px 15px;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #1d1c16;
+}
+footer {
+    background-color: #222;
+    color: white;
+    padding: 30px 50px;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+footer h2 {
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #ccc;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer hr {
+    margin: 25px 0 15px;
+    border: none;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #aaa;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-links {
+        gap: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.navbar {
+    background-color: #e50914;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0  0 15px 15px;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #14140f;
+}
+.logout-btn {
+  background-color: #e50914; 
+     
+    
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+  color: #14140f;
+    
+}
+.show-time {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.show-time > div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.show-time > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.show-time h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.show-time p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.show-time button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-time button:hover {
+    background-color: #444;
+}
+
+@media (max-width: 600px) {
+    .show-time {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+}
+.seats {
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.seats h1 {
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.seats > button {
+    width: 110px;
+    min-height: 75px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+    color: #222;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.seats > button:hover:not(:disabled) {
+    background-color: #222;
+    color: white;
+    transform: scale(1.05);
+}
+
+.seats > button p {
+    margin: 4px 0;
+}
+
+/* Booked seats */
+.seats > button:disabled {
+    background-color: #ccc;
+    color: #777;
+    border-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Selected seat */
+.seats > button.selected {
+    background-color: green;
+    color: white;
+}
+
+/* Selected count */
+.seats h3 {
+    margin: 30px 0 20px;
+    color: #333;
+}
+
+/* Book Now button */
+.seats > button:last-child {
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.seats > button:last-child:hover:not(:disabled) {
+    background-color: #444;
+}
+
+.seats > button:last-child:disabled {
+    background-color: #aaa;
+    color: #eee;
+    cursor: not-allowed;
+}
+.movie-details {
+    width: 600px;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.movie-details h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+.movie-details p {
+    margin: 12px 0;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.movie-details button {
+    display: block;
+    width: 150px;
+    margin: 30px auto 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.movie-details button:hover {
+    background-color: #444;
+}
+.BookingSucess {
+    width: 500px;
+    margin: 60px auto;
+    padding: 35px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.BookingSucess h1 {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.BookingSucess h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.BookingSucess p {
+    margin: 15px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.BookingSucess strong {
+    color: #222;
+}
+
+.BookingSucess button {
+    margin: 20px 8px 0;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.BookingSucess button:hover {
+    background-color: #444;
+}
+.BookingHistory {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.BookingHistory h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #222;
+}
+
+/* No history message */
+.BookingHistory > p {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+}
+
+/* Each booking card */
+.BookingHistory > div {
+    width: 600px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.BookingHistory > div span {
+    font-weight: bold;
+    color: #333;
+}
+
+.BookingHistory > div h3 {
+    margin: 15px 0;
+    color: #222;
+    font-size: 21px;
+}
+
+.BookingHistory > div p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Status */
+.BookingHistory > div p:nth-of-type(1) {
+    font-weight: bold;
+}
+
+/* Cancel button */
+.BookingHistory > div button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.BookingHistory > div button:hover {
+    background-color: #c82333;
+}
+
+/* Disabled Cancel button */
+.BookingHistory > div button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Home button */
+.BookingHistory > button {
+    display: block;
+    margin: 35px auto 10px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.BookingHistory > button:hover {
+    background-color: #444;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .BookingHistory {
+        padding: 25px 10px;
+    }
+
+    .BookingHistory > div {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.movie-container {
+    min-height: 100vh;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    background-color: #f5f5f5;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .movie-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px;
+    }
+}
+
+/* Small tablet */
+@media (max-width: 750px) {
+    .movie-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 25px;
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .movie-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.registerBox {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.register {
+    width: 380px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.register input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.register input:focus {
+    border-color: #000305;
+}
+
+.register span {
+    font-size: 14px;
+    color: #555;
+}
+
+.register a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+.register button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e50914;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register button:hover {
+    background-color: #d10c0c;
+   
+}
+.registerLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.registerLink a {
+    margin: 0;
+}
+.loginBox {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.login {
+    width: 380px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.login input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.login input:focus {
+    border-color: #007bff;
+}
+
+.login span {
+    font-size: 14px;
+    color: #555;
+}
+
+.login a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e50914;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #ee030f;
+}
+.loginLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.loginLink a {
+    margin: 0;
+}
+.Admindash {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f5f5f5;
+}
+
+.Admindash h1 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 32px;
+}
+
+.Admindash button {
+    width: 250px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Admindash button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.Admindash button:active {
+    transform: translateY(0);
+}
+.moviescard {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.moviescard h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.moviescard form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.moviescard input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.moviescard input:focus {
+    border-color: #007bff;
+}
+
+.moviescard input[type="date"] {
+    color: #555;
+}
+
+.moviescard button {
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.moviescard button:hover {
+    background-color: #0056b3;
+}
+.showsss {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.showsss h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.showsss form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.showsss input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.showsss input:focus {
+    border-color: #007bff;
+}
+
+.showsss input[type="date"],
+.showsss input[type="time"] {
+    color: #555;
+}
+
+.showsss button {
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.showsss button:hover {
+    background-color: #0056b3;
+}
+.Thearte {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Thearte h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+    font-size: 28px;
+}
+
+.Thearte form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Thearte input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.Thearte input:focus {
+    border-color: #007bff;
+}
+
+.Thearte button {
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Thearte button:hover {
+    background-color: #0056b3;
+}
+.admov {
+    min-height: 100vh;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.admov h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.admov > button {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admov > button:hover {
+    background-color: #0056b3;
+}
+
+.admov > div {
+    width: 550px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.admov h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.admov p {
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.admov > div button {
+    padding: 9px 18px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admov > div button:first-of-type {
+    background-color: #28a745;
+}
+
+.admov > div button:first-of-type:hover {
+    background-color: #218838;
+}
+
+.admov > div button:last-of-type {
+    background-color: #dc3545;
+}
+
+.admov > div button:last-of-type:hover {
+    background-color: #c82333;
+}
+.admshow {
+    min-height: 100vh;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.admshow h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.admshow > button {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admshow > button:hover {
+    background-color: #0056b3;
+}
+
+.admshow > div {
+    width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.admshow h3 {
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.admshow p {
+    margin: 6px 0;
+    color: #666;
+}
+.admtheat {
+    min-height: 100vh;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.admtheat h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.admtheat > button {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admtheat > button:hover {
+    background-color: #0056b3;
+}
+
+.admtheat > div {
+    width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.admtheat h3 {
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.admtheat p {
+    margin: 0;
+    color: #666;
+}
+.movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* Available Shows */
+
+.ShowMovies {
+    min-height: 100vh;
+    padding: 40px;
+    background-color: #f5f5f5;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ShowMovies h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 32px;
+}
+
+/* Show Card */
+
+.ShowMovies > div {
+    width: 300px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s ease;
+}
+
+.ShowMovies > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Link */
+
+.ShowMovies a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Movie title */
+
+.ShowMovies h3 {
+    margin: 0 0 15px;
+    color: #222;
+    font-size: 22px;
+}
+
+/* Details */
+
+.ShowMovies p {
+    margin: 8px 0;
+    color: #666;
+    font-size: 15px;
+}
+
+
+.ShowMovies p:last-child {
+    color: #e50914;
+    font-weight: bold;
+}

@@ -43,12 +43,12 @@ const Delmovie = async(id)=>{
   return (
     <div className="admov">
       <h1>Manage Movies</h1>
-      <button onClick={()=>navigate("/admin/addmovie")}>Add Movie</button>
+      <button onClick={()=>navigate("/BookMyShow/admin/addmovie")}>Add Movie</button>
       {movies.map((movie) => (
         <div key={movie.id}>
           <h3>{movie.title}</h3>
           <p>{movie.description}</p>
-          <button onClick={()=>navigate(`/admin/editmovie/${movie.id}`)}>Edit</button>
+          <button onClick={()=>navigate(`/BookMyShow/admin/editmovie/${movie.id}`)}>Edit</button>
           <button onClick={()=>Delmovie(movie.id)} >Delete</button>
         </div>
       ))}

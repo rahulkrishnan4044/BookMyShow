@@ -7,15 +7,15 @@ function AdminDashboard() {
     <div className="Admindash">
       <h1>Admin Dashboard</h1>
 
-      <button onClick={() => navigate("/admin/movies")}>
+      <button onClick={() => navigate("/BookMyShow/admin/movies")}>
         Manage Movies
       </button>
 
-      <button onClick={() => navigate("/admin/theatres")}>
+      <button onClick={() => navigate("/BookMyShow/admin/theatres")}>
         Manage Theatres
       </button>
 
-      <button onClick={() => navigate("/admin/shows")}>
+      <button onClick={() => navigate("/BookMyShow/admin/shows")}>
         Manage Shows
       </button>
 

@@ -8,7 +8,6 @@ function Login() {
     const [email,setEmail] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
-    const [IsLogin,SetIsLogin] = useState(true)
 
 
     const handleLogin=async(e)=>{
@@ -34,7 +33,6 @@ function Login() {
             }
             const token = data.token 
             localStorage.setItem("token",token)
-            localStorage.setItem("IsLogin",IsLogin)
             alert("Login Succesfull!")
             navigate("/BookMyShow")
 
@@ -58,7 +56,7 @@ function Login() {
                 onChange={(e)=>setPassword(e.target.value)}  />
                 <div className="loginLink">
                     <span>Don't have an account?</span>
-                    <Link to="/register">Register</Link>
+                    <Link to="/BookMyShow/register">Register</Link>
                 </div>
                 <button type="submit">Login</button>
             </form>

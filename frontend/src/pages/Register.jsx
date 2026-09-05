@@ -40,7 +40,7 @@ function Register() {
             alert(error)
             
         }
-        navigate("/login")
+        navigate("/BookMyShow/login")
     }
     return(
         <div className="registerBox">

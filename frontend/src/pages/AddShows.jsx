@@ -45,7 +45,7 @@ function AddShow() {
             console.log(error);
         }
         alert("Show Added Successfully!!!...")
-        navigate("/admin/shows")
+        navigate("/BookMyShow/admin/shows")
     }
 
 

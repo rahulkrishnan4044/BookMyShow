@@ -29,7 +29,7 @@ function ShowSelection() {
                     <h3>{show.Theatre_name}</h3>
                     <p>{show.Screen_name}</p>
                     <p>{show.show_date} - ({show.start_time}  -  {show.end_time})</p>
-                    <button onClick={()=>navigate(`/seats/${show.id}`)}>Select Seats</button>
+                    <button onClick={()=>navigate(`/BookMyShow/seats/${show.id}`)}>Select Seats</button>
                 </div>
             ))}
         </div>

@@ -22,7 +22,7 @@ function Show() {
 
             {shows.map((show) => (
                 <div key={show.id}>
-                    <Link to={`/movies/${show.movie_id}`}>
+                    <Link to={`/BookMyShow/movies/${show.movie_id}`}>
                         <h3>{show.Movie_title}</h3>
                         <p>{show.Theatre_name}</p>
                         <p>{show.Screen_name}</p>

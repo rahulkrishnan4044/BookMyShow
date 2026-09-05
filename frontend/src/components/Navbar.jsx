@@ -10,7 +10,7 @@ function Navbar() {
         localStorage.removeItem("token");
         localStorage.removeItem("IsLogin");
 
-        navigate("/login");
+        navigate("/BookMyShow/login");
     };
 
     return (
@@ -20,9 +20,9 @@ function Navbar() {
 
             <div className="navbar-links">
                 <Link to="/BookMyShow">Home</Link>
-                <Link to="/booking-history">Bookings</Link>
-                <Link to="/shows">Shows</Link>
-                <Link to="/about">About Us</Link>
+                <Link to="/BookMyShow/booking-history">Bookings</Link>
+                <Link to="/BookMyShow/shows">Shows</Link>
+                <Link to="/BookMyShow/about">About Us</Link>
 
                 {isLogin ? (
                     <button
@@ -32,7 +32,7 @@ function Navbar() {
                         Logout
                     </button>
                 ) : (
-                    <Link className="login-btn" to="/login">
+                    <Link className="login-btn" to="/BookMyShow/login">
                         Login
                     </Link>
                 )}

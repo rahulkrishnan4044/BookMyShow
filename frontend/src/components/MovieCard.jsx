@@ -1,9 +1,8 @@
-import "./Moviecard.css";
 import {Link, useNavigate} from "react-router-dom"
 function MovieCard({movie}){
     const navigate = useNavigate();
 return(
-<Link to={`/movies/${movie.id}`}>
+<Link to={`/BookMyShow/movies/${movie.id}`}>
         <div className="movie-card">
             <img
             src={movie.poster}

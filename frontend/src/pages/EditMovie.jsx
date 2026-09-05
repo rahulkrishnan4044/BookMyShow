@@ -52,7 +52,7 @@ function EditMovie() {
            
         }
         alert("Movie Added Successfully!!!.....")
-        navigate("/admin/movies")
+        navigate("/BookMyShow/admin/movies")
     }
    
 

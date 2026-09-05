@@ -19,7 +19,7 @@ function AdminShow() {
     return(
         <div className="admshow">
             <h1>Avaliable Shows </h1>
-            <button onClick={()=>navigate("/admin/addshow")}>Add Show</button>
+            <button onClick={()=>navigate("/BookMyShow/admin/addshow")}>Add Show</button>
             {shows.map((show)=>(
                 <div key={show.id}>
                     <h3>{show.Movie_title}</h3>

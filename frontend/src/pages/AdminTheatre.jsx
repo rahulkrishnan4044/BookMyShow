@@ -25,7 +25,7 @@ function AdminTheatre() {
     return(
        <div className="admtheat">
          <h2>Avaliable Theatres</h2>
-         <button onClick={()=>navigate("/admin/addtheatre")}>Add Theatre</button>
+         <button onClick={()=>navigate("/BookMyShow/admin/addtheatre")}>Add Theatre</button>
          {theatre.map((theat)=>(
             <div key={theat.id}>
                 <h3>{theat.name}</h3>

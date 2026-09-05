@@ -20,7 +20,7 @@ function MovieDetails() {
         <div className="movie-details">
             <h1>Movie details</h1>
             <img
-            src={movie.poster}
+            src={movie.image}
             alt={movie.title}
             className="movie-poster"/>
             <h2>{movie.title}</h2>
@@ -29,7 +29,7 @@ function MovieDetails() {
             <p>Language : {movie.language}</p>
             <p>Release date : {movie.release_date}</p>
             <p>Description : {movie.description}</p>
-            <button onClick={()=>navigate(`/shows/${movie.id}`)}>Book Now</button>
+            <button onClick={()=>navigate(`/BookMyShow/shows/${movie.id}`)}>Book Now</button>
         </div>
     )
 }

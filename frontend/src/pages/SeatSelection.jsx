@@ -57,7 +57,7 @@ function SeatSelection() {
                 return
             }
             alert("Booking sucessfull")
-            navigate(`/booking-success`,{state:data})
+            navigate(`/BookMyShow/booking-success`,{state:data})
 
         }
         catch(error){

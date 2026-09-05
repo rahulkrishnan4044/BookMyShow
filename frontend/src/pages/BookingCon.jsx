@@ -17,7 +17,7 @@ function BookingCon() {
         <p>seat number : {state?.seats.join(", ")}</p>
         <p>Thanking you for booking your tickets</p>
         <button onClick={()=>navigate("/BookMyShow")}>Home</button>
-        <button onClick={()=>navigate("/booking-history")}>Go to Booking History</button>
+        <button onClick={()=>navigate("/BookMyShow/booking-history")}>Go to Booking History</button>
         </div>
     )
 }

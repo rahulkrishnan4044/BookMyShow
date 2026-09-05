@@ -35,7 +35,7 @@ function AddTheatre() {
           return  console.log(err);
             
         }
-        navigate("/admin/theatres")
+        navigate("/BookMyShow/admin/theatres")
 }
 return(
     <div className="Thearte">

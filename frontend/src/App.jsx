@@ -36,30 +36,25 @@ function App() {
                 <Routes>
 
                     <Route path="/BookMyShow" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/shows" element={<Show />} />
-
-                    <Route path="/movies/:id" element={<MovieDetails />} />
-                    <Route path="/shows/:movie_id" element={<ShowSelection />} />
-                    <Route path="/seats/:show_id" element={<SeatSelection />} />
-
-                    <Route path="/booking-success" element={<BookingCon />} />
-
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/booking-history" element={<BookingHistory />} />
+                    <Route path="/BookMyShow/about" element={<About />} />
+                    <Route path="/BookMyShow/shows" element={<Show />} />
+                    <Route path="/BookMyShow/movies/:id" element={<MovieDetails />} />
+                    <Route path="/BookMyShow/shows/:movie_id" element={<ShowSelection />} />
+                    <Route path="/BookMyShow/seats/:show_id" element={<SeatSelection />} />
+                    <Route path="/BookMyShow/booking-success" element={<BookingCon />} />
+                    <Route path="/BookMyShow/register" element={<Register />} />
+                    <Route path="/BookMyShow/login" element={<Login />} />
+                    <Route path="/BookMyShow/booking-history" element={<BookingHistory />} />
 
                     {/* Admin */}
-                    <Route path="/admin" element={<AdminDashboard />} />
-                    <Route path="/admin/movies" element={<AdminMovies />} />
-                    <Route path="/admin/addmovie" element={<AddMovie />} />
-                    <Route path="/admin/editmovie/:id" element={<EditMovie />} />
-
-                    <Route path="/admin/theatres" element={<AdminTheatre />} />
-                    <Route path="/admin/addtheatre" element={<AddTheatre />} />
-
-                    <Route path="/admin/shows" element={<AdminShow />} />
-                    <Route path="/admin/addshow" element={<AddShow />} />
+                    <Route path="/BookMyShow/admin" element={<AdminDashboard />} />
+                    <Route path="/BookMyShow/admin/movies" element={<AdminMovies />} />
+                    <Route path="/BookMyShow/admin/addmovie" element={<AddMovie />} />
+                    <Route path="/BookMyShow/admin/editmovie/:id" element={<EditMovie />} />
+                    <Route path="/BookMyShow/admin/theatres" element={<AdminTheatre />} />
+                    <Route path="/BookMyShow/admin/addtheatre" element={<AddTheatre />} />
+                    <Route path="/BookMyShow/admin/shows" element={<AdminShow />} />
+                    <Route path="/BookMyShow/admin/addshow" element={<AddShow />} />
 
                 </Routes>
             </main>

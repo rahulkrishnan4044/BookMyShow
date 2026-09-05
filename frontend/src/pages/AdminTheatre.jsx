@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { url } from "../assets/url";
 
 
 
@@ -7,7 +8,7 @@ function AdminTheatre() {
     const navigate = useNavigate();
     const [theatre,setTheatre] = useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/api/theatre")
+        fetch(`${url}/api/theatre`)
         .then((res)=>res.json())
         .then((data)=>{setTheatre(data.theatre)
             console.log(data);

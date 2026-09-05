@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { url } from "../assets/url";
 
 function BookingHistory() {
     const [bookings, setBookings] = useState([]);
@@ -11,7 +12,7 @@ function BookingHistory() {
 
             try {
                 const response = await fetch(
-                    "http://localhost:5000/api/booking/id",
+                    `${url}/api/booking/id`,
                     {
                         method: "GET",
                         headers: {
@@ -84,7 +85,7 @@ const cancelBooking = async(id)=>{
                     </div>
                 ))
             )}
-            <button onClick={()=>navigate("/")}>Home</button>
+            <button onClick={()=>navigate("/BookMyShow")}>Home</button>
         </div>
     );
 }

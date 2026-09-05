@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { url } from "../assets/url";
 
 
 
@@ -17,7 +18,7 @@ function AddShow() {
         try{
 
             const token = localStorage.getItem("token");
-            const res =await fetch("http://localhost:5000/api/shows",
+            const res =await fetch(`${url}/api/shows`,
                 {
                     method:"POST",
                     headers:{

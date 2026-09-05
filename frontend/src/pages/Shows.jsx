@@ -1,4 +1,4 @@
-
+import { url } from "../assets/url";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ function Show() {
     const [shows, setShows] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/shows/")
+        fetch(`${url}/api/shows/`)
             .then((res) => res.json())
             .then((data) => {
                 setShows(data.shows);

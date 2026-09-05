@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import api from "../services/api";
+import { url } from "../assets/url";
 
 function SeatSelection() {
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ function SeatSelection() {
     const handlebooking =async()=>{
         try{
             const token = localStorage.getItem("token")
-            const responce = await fetch("http://localhost:5000/api/booking",
+            const responce = await fetch(`${url}/api/booking`,
                 {
                     method:"POST",
                     headers:{

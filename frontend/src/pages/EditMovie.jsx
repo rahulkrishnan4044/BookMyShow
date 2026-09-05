@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { url } from "../assets/url";
 
 
 
@@ -22,7 +23,7 @@ function EditMovie() {
     }
         try{
             const token = localStorage.getItem("token")
-            const response = await fetch(`http://localhost:5000/api/movies/`,
+            const response = await fetch(`${url}/api/movies/`,
                 {
                     method:"PUT",
                     headers:{

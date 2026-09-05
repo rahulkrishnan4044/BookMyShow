@@ -19,7 +19,7 @@ function Navbar() {
             <h1>BookMyShow</h1>
 
             <div className="navbar-links">
-                <Link to="/">Home</Link>
+                <Link to="/BookMyShow">Home</Link>
                 <Link to="/booking-history">Bookings</Link>
                 <Link to="/shows">Shows</Link>
                 <Link to="/about">About Us</Link>

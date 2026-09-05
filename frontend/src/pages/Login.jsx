@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { url } from "../assets/url";
 
 
 function Login() {
@@ -14,7 +15,7 @@ function Login() {
         e.preventDefault();
 
         try{
-            const response = await fetch("http://localhost:5000/api/auth/login",{
+            const response = await fetch(`${url}/api/auth/login`,{
                 method:"POST",
                 headers:{
                     "Content-Type" : "application/json",
@@ -35,7 +36,7 @@ function Login() {
             localStorage.setItem("token",token)
             localStorage.setItem("IsLogin",IsLogin)
             alert("Login Succesfull!")
-            navigate("/")
+            navigate("/BookMyShow")
 
         }catch(error){
             console.log(error);

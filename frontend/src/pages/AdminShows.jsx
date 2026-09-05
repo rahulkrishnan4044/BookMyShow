@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { url } from "../assets/url";
 
 
 
@@ -8,7 +9,7 @@ function AdminShow() {
 
     const [shows,setShow] = useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/api/shows/")
+        fetch(`${url}/api/shows/`)
         .then((res)=>res.json())
         .then((data)=>{setShow(data.shows)
         }

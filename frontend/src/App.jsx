@@ -35,7 +35,7 @@ function App() {
             <main className="main-content">
                 <Routes>
 
-                    <Route path="/" element={<Home />} />
+                    <Route path="/BookMyShow" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/shows" element={<Show />} />
 

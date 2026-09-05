@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { url } from "../assets/url";
 
 
 
@@ -12,7 +13,7 @@ function AddTheatre() {
         e.preventDefault()
         try{
             const token = localStorage.getItem("token")
-            const response = await fetch("http://localhost:5000/api/theatre/",{
+            const response = await fetch(`${url}/api/theatre/`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",

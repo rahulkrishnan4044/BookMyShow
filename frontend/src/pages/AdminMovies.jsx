@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { url } from "../assets/url";
 
 function AdminMovies() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch(`${url}/api/movies`)
       .then((res) => res.json())
       .then((data) => {setMovies(data);})
       .catch((error) => console.log(error));

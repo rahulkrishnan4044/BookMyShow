@@ -62,7 +62,7 @@ function EditMovie() {
 
     return(
 
-        <div>
+        <div className="moviescard">
             <h2>Movie Detials</h2>
             <form onSubmit={edit}>
             <input type="text" placeholder="Title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
@@ -76,6 +76,7 @@ function EditMovie() {
             <button type="submit">Submit</button>
             </form>
         </div>
+
 
     );
 }

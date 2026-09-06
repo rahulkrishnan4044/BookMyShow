@@ -8,7 +8,7 @@ const getMovies = (callback) => {
 };
 
 const createMovies = (movie,callback)=>{
-    const sql = "Insert into movies (title,description,duration,language,genre,release_date)values(?,?,?,?,?,?);"
+    const sql = "Insert into movies (title,description,duration,language,genre,release_date,poster,image)values(?,?,?,?,?,?,?,?);"
     const values =[
         movie.title,
         movie.description,
@@ -16,6 +16,8 @@ const createMovies = (movie,callback)=>{
         movie.language,
         movie.genre,
         movie.release_date,
+        movie.poster,
+        movie.image,
 
     ]
     db.query(sql,values,callback)
@@ -28,7 +30,7 @@ const getMovieById =(id,callback)=>{
 
 const updateMovie = (movie,callback)=>{
 
-    const sql = "Update  movies set title=?,description=?,duration = ?,language = ?,genre = ?,release_date = ? where id = ?;"
+    const sql = "Update  movies set title=?,description=?,duration = ?,language = ?,genre = ?,release_date = ?, poster =?, image=? where id = ?;"
 
      const values =[
         movie.title,
@@ -37,8 +39,9 @@ const updateMovie = (movie,callback)=>{
         movie.language,
         movie.genre,
         movie.release_date,
-        movie.id
-
+        movie.poster,
+        movie.image,
+        movie.id,
     ]
     db.query(sql,values,callback)
 } 

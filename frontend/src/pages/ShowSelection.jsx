@@ -17,8 +17,8 @@ function ShowSelection() {
         .catch((err)=>{console.log(err);
         })
     },[movie_id]);
-    if (!shows) {
-        return(<p>Loading...</p>)
+    if (shows.length===0) {
+        return(<h1>No shows Available</h1>)
     }
     return(
         <>

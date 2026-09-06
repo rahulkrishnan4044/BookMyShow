@@ -7,6 +7,7 @@ import { url } from "../assets/url";
 function Login() {
     const [email,setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [IsLogin, setIsLogin] = useState(false)
     const navigate = useNavigate();
 
 
@@ -33,7 +34,9 @@ function Login() {
             }
             const token = data.token 
             localStorage.setItem("token",token)
+            localStorage.setItem("IsLogin","true")
             alert("Login Succesfull!")
+            
             navigate("/BookMyShow")
 
         }catch(error){

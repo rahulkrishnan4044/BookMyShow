@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
     const navigate = useNavigate();
-
-    const isLogin = localStorage.getItem("IsLogin") === "true";
+    
+    const IsLogin = localStorage.getItem("IsLogin") == "true";
 
     const handleLogout = () => {
         localStorage.removeItem("token");
@@ -24,7 +24,7 @@ function Navbar() {
                 <Link to="/BookMyShow/shows">Shows</Link>
                 <Link to="/BookMyShow/about">About Us</Link>
 
-                {isLogin ? (
+                {IsLogin ? (
                     <button
                         className="logout-btn"
                         onClick={handleLogout}

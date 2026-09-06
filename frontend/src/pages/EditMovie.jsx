@@ -13,11 +13,13 @@ function EditMovie() {
     const [language,setLanguage] = useState("");
     const [genre,setGenre] = useState("");
     const [release_date,setRelease_date] = useState("");
+    const [poster,setPoster] = useState("");
+    const [image,setImage] = useState("");
     const navigate=useNavigate()
     
     const edit=async(e)=>{
          e.preventDefault();
-        if (!title||!description||!duration||!language||!genre||!release_date) {
+        if (!title||!description||!duration||!language||!genre||!release_date||!poster||!image) {
         return console.log("Fill all column");
         
     }
@@ -37,7 +39,9 @@ function EditMovie() {
                         duration:duration,
                         language:language,
                         genre:genre,
-                        release_date:release_date
+                        release_date:release_date,
+                        poster:poster,
+                        image:image,
                     })
                 }
             )
@@ -67,6 +71,8 @@ function EditMovie() {
             <input type="text" placeholder="Language" value={language} onChange={(e)=>setLanguage(e.target.value)}/>
             <input type="text" placeholder="Genre" value={genre} onChange={(e)=>setGenre(e.target.value)}/>
             <input type="date" placeholder="Relese Date" value={release_date} onChange={(e)=>setRelease_date(e.target.value)}/>
+            <input type="text" placeholder="poster" value={poster} onChange={(e)=>setPoster(e.target.value)}/>
+            <input type="text" placeholder="image" value={image} onChange={(e)=>setImage(e.target.value)}/>
             <button type="submit">Submit</button>
             </form>
         </div>

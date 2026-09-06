@@ -14,13 +14,13 @@ const getAllMovies = (req, res) => {
     });
 };
 const createMovies = (req,res)=>{
-    const{title,description,duration,language,genre,release_date} = req.body;
+    const{title,description,duration,language,genre,release_date,poster,image} = req.body;
     if (!title||!description||!duration||!language||!genre||!release_date) {
         return res.status(400).json({
             message:"All column must be filled"
         })
     }
-    moviesModel.createMovies({title,description,duration,language,genre,release_date},(err,result)=>{
+    moviesModel.createMovies({title,description,duration,language,genre,release_date,poster,image},(err,result)=>{
         if (err) {
             return res.status(400).json({
                 message:"Database Error ",
@@ -34,7 +34,9 @@ const createMovies = (req,res)=>{
             duration:duration,
             language:language,
             genre:genre,
-            release_date:release_date
+            release_date:release_date,
+            poster:poster,
+            image:image,
         })
     })
 
@@ -63,7 +65,7 @@ const getMovieById =(req,res)=>{
 const updateMovie =(req,res)=>{
     const {id} = req.body.id
     
-    const{title,description,duration,language,genre,release_date} = req.body;
+    const{title,description,duration,language,genre,release_date,poster,image} = req.body;
     if (!title||!description||!duration||!language||!genre||!release_date) {
         return res.status(400).json({
             message:"All column must be filled"
@@ -84,10 +86,10 @@ const updateMovie =(req,res)=>{
 
     
     
-    moviesModel.updateMovie({title,description,duration,language,genre,release_date,id},(err,result)=>{
+    moviesModel.updateMovie({title,description,duration,language,genre,release_date,id,poster,image},(err,result)=>{
         if (err) {
             return res.status(400).json({
-                message:"Database Error ",
+                message:err.message,
                 error:err.message
             })
         }
@@ -98,7 +100,9 @@ const updateMovie =(req,res)=>{
             duration:duration,
             language:language,
             genre:genre,
-            release_date:release_date
+            release_date:release_date,
+            poster:poster,
+            image:image,
         })
     })
     })
